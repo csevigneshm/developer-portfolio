@@ -438,7 +438,7 @@ export const educationData = [
 | react-fast-marquee |
 | react-helmet  |
 | react-icons  |
-| react-reveal |
+| react-awesome-reveal |
 | react-router-dom  |
 | react-router-hash-link  |
 | react-slick  |

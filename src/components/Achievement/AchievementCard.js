@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-awesome-reveal';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 

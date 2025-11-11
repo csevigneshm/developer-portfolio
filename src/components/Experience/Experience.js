@@ -23,9 +23,11 @@ function Experience() {
                             key={exp.id}
                             id={exp.id}
                             jobtitle={exp.jobtitle}
+                            place={exp.place}
                             company={exp.company}
                             startYear={exp.startYear}
-                            endYear={exp.endYear}/>
+                            endYear={exp.endYear}
+                            description={exp.description} />
                     ))}
                  </div>
              </div>

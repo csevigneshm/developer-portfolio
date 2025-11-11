@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { FaPlay, FaCode } from 'react-icons/fa';
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-awesome-reveal';
 
 import placeholder from '../../../assets/png/placeholder.png';
 import './SingleProject.css';
@@ -69,26 +69,29 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 aria-label='Demo'
                             />
                         </a>
-                        <a
-                            href={code}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.iconBtn}
-                            aria-labelledby={`${name
-                                .replace(' ', '-')
-                                .toLowerCase()} ${name
-                                .replace(' ', '-')
-                                .toLowerCase()}-code`}
-                        >
-                            <FaCode
-                                id={`${name
+                        {code && (
+                            <a
+                                href={code}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.iconBtn}
+                                aria-labelledby={`${name
+                                    .replace(' ', '-')
+                                    .toLowerCase()} ${name
                                     .replace(' ', '-')
                                     .toLowerCase()}-code`}
-                                className={classes.icon}
-                                aria-label='Code'
-                            />
-                        </a>
+                            >
+                                <FaCode
+                                    id={`${name
+                                        .replace(' ', '-')
+                                        .toLowerCase()}-code`}
+                                    className={classes.icon}
+                                    aria-label='Code'
+                                />
+                            </a>
+                        )}
                     </div>
+
                 </div>
                 <p
                     className='project--desc'
