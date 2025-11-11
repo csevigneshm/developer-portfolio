@@ -4,7 +4,7 @@ export const educationData = [
         institution: 'Vigneswara Vidyalaya Matriculation Higher Secondary School',
         course: 'SSLC',
         startYear: '',
-        endYear: '2015'
+        endYear: '2016'
     },
     {
         id: 2,
