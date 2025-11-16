@@ -8,7 +8,7 @@ function Main() {
     return (
         <div>
             <Helmet>
-                <title>{headerData.name} - Portfolio</title>
+                <title>{headerData.name} - Portfolio </title>
             </Helmet>
             <CustomCursor/>
             <Navbar />        
