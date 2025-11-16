@@ -4,23 +4,15 @@
    'CSS',
    'PHP',
    'React',
-   'Django',
+   'MySQL',
    'Next JS',
    'Node JS',
    'Angular',
-   'Photoshop',
-   'Illustrator',
    'Markdown',
    'Flutter',
    'Dart',
-   'Swift',
    'Git',
-   'MongoDB',
-   'Tailwind',
-   'Firebase',
-   'Django',
-   'MaterialUI',
-   'Pytorch',
+   'MongoDB'
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
