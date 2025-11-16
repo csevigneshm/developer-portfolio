@@ -187,7 +187,7 @@ yarn start
 │   │   │   └── Bestermind
 │   │   │       └── BestermindRegular.ttf
 │   │   ├── pdf
-│   │   │   └── resume.pdf
+│   │   │   └── Vignesh-Resume-nov-2k25.pdf
 │   │   └── svg
 │   │       ├── about
 │   │       ├── contacts
@@ -307,7 +307,7 @@ export const headerData = {
 
 // You can also import image and PDF from assets as shown below
 
-import resume from '../assets/pdf/resume.pdf'
+import resume from '../assets/pdf/Vignesh-Resume-nov-2k25.pdf'
 import profileImg from '../assets/png/profileImg'
 
 export const headerData = {
