@@ -1,5 +1,5 @@
-import resume from '../assets/pdf/Vignesh-Resume-nov-2k25.pdf'
-import pic from '../assets/png/resume.jpg'
+import resume from '../assets/pdf/Resume.pdf'
+import pic from '../assets/png/Resume.jpeg'
 
 export const headerData = {
     name: 'Vignesh M',
