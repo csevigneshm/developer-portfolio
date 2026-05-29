@@ -26,6 +26,8 @@
   "scripts": {
     "start": "NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "deploy": "./deploy.sh",
+    "deploy:upload": "./deploy.sh --upload-only",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

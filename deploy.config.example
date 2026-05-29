@@ -1,0 +1,11 @@
+# Copy to deploy.config.local and edit if needed
+# cp deploy.config.example deploy.config.local
+
+# Optional: password for non-interactive deploy (requires sshpass)
+# brew install hudochenkov/sshpass/sshpass
+# SSHPASS="your-server-password"
+
+# Optional overrides (defaults are set in deploy.sh)
+# SERVER_USER="vignesh"
+# SERVER_HOST="199.192.19.46"
+# REMOTE_PATH="~/react-projects/developer-portfolio"
