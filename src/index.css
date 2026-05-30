@@ -18,6 +18,18 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root,
+.app {
+  min-height: 100%;
+  background-color: #212121;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -30,7 +42,7 @@ a {
     height: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #555;
+    background: #212121;
 }
 ::-webkit-scrollbar-thumb {
     background: #555;

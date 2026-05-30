@@ -23,20 +23,28 @@ function Landing() {
             borderRadius: '30px',
             textTransform: 'inherit',
             textDecoration: 'none',
-            width: '150px',
+            minWidth: '190px',
+            padding: '0 1.5rem',
             fontSize: '1rem',
             fontWeight: '500',
             height: '50px',
             fontFamily: 'var(--primaryFont)',
             border: `3px solid ${theme.primary}`,
             transition: '100ms ease-out',
+            whiteSpace: 'nowrap',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            lineHeight: 1,
             '&:hover': {
                 backgroundColor: theme.tertiary,
                 color: theme.secondary,
                 border: `3px solid ${theme.tertiary}`,
             },
             [t.breakpoints.down('sm')]: {
+                minWidth: '180px',
                 width: '180px',
+                padding: '0 1rem',
             },
         },
         contactBtn: {
@@ -45,13 +53,19 @@ function Landing() {
             borderRadius: '30px',
             textTransform: 'inherit',
             textDecoration: 'none',
-            width: '150px',
+            minWidth: '150px',
+            padding: '0 1.5rem',
             height: '50px',
             fontSize: '1rem',
             fontWeight: '500',
             fontFamily: 'var(--primaryFont)',
             border: `3px solid ${theme.primary}`,
             transition: '100ms ease-out',
+            whiteSpace: 'nowrap',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            lineHeight: 1,
             '&:hover': {
                 backgroundColor: theme.secondary,
                 color: theme.tertiary,
@@ -116,7 +130,7 @@ function Landing() {
                 </div>
                 <img
                     src={headerData.image}
-                    alt=''
+                    alt={`${headerData.name} - Software Engineer`}
                     className='landing--img'
                     style={{
                         opacity: `${drawerOpen ? '0' : '1'}`,
@@ -133,22 +147,23 @@ function Landing() {
                     >
                         <h6>{headerData.title}</h6>
                         <h1>{headerData.name}</h1>
-                        <p>{headerData.desciption}</p>
+                        <p>{headerData.description}</p>
 
                         <div className='lcr-buttonContainer'>
                             {headerData.resumePdf && (
-                                <a
+                                <Button
+                                    component='a'
                                     href={headerData.resumePdf}
                                     download='resume'
                                     target='_blank'
                                     rel='noreferrer'
+                                    className={classes.resumeBtn}
                                 >
-                                    <Button className={classes.resumeBtn}>
-                                        Download CV
-                                    </Button>
-                                </a>
+                                    Download Resume
+                                </Button>
                             )}
                             <NavLink
+                                className='landing-contact-link'
                                 to='/#contacts'
                                 smooth={true}
                                 spy='true'

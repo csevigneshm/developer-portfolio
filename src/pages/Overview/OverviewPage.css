@@ -1,0 +1,310 @@
+.overviewPage {
+    min-height: 100vh;
+    font-family: var(--primaryFont);
+}
+
+.overviewPage-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+.overviewPage-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.overviewPage-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    transition: transform 0.2s;
+}
+
+.overviewPage-home:hover {
+    transform: scale(1.08);
+}
+
+.overviewPage-print {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 24px;
+    font-family: var(--primaryFont);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.overviewPage-print:hover {
+    transform: scale(1.04);
+}
+
+.overviewPage-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem 3rem;
+}
+
+.overview-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid;
+}
+
+.overview-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.overview-header-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.overview-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.overview-summary {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.overview-meta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.overview-contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+    font-size: 0.85rem;
+}
+
+.overview-contact-row a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.overview-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.overview-section p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.overview-section--full {
+    grid-column: 1 / -1;
+}
+
+.overview-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.overview-skill-tag {
+    padding: 0.35rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.overview-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.overview-list-item {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.overview-list-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.overview-list-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.overview-list-head strong {
+    font-size: 0.95rem;
+}
+
+.overview-list-head span {
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+
+.overview-list-sub {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.overview-bullets {
+    margin-top: 0.5rem;
+    padding-left: 1.1rem;
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.overview-bullets li {
+    margin-bottom: 0.3rem;
+}
+
+.overview-project-links {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.overview-project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.78rem;
+}
+
+.overview-project-tags span::after {
+    content: '·';
+    margin-left: 0.5rem;
+    opacity: 0.5;
+}
+
+.overview-project-tags span:last-child::after {
+    content: none;
+}
+
+.overview-footer {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .overview-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .overview-contact-row {
+        justify-content: center;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-list-head {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .overviewPage {
+        background: #fff !important;
+        color: #111 !important;
+    }
+
+    .overviewPage-content {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .overview-header,
+    .overview-section,
+    .overview-list-item {
+        break-inside: avoid;
+    }
+
+    .overview-header {
+        border-color: #333 !important;
+    }
+
+    .overview-header-text h1,
+    .overview-section h2,
+    .overview-list-sub,
+    .overview-project-links a {
+        color: #111 !important;
+    }
+
+    .overview-title,
+    .overview-summary,
+    .overview-contact-row a,
+    .overview-section p,
+    .overview-list-head strong,
+    .overview-list-head span,
+    .overview-project-tags span {
+        color: #333 !important;
+    }
+
+    .overview-skill-tag {
+        background: #eee !important;
+        color: #111 !important;
+        border: 1px solid #ccc;
+    }
+
+    a {
+        color: #111 !important;
+    }
+}

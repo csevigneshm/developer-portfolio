@@ -39,6 +39,7 @@
     border-radius: 20px;
     margin-bottom: 1.5rem;
     transition: background-color 200ms ease-in-out;
+    box-sizing: border-box;
 }
 
 .educard-img {
@@ -57,6 +58,10 @@
 
 .education-details{
     margin-left: 0.6rem;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .education-details > h6 {
@@ -130,7 +135,8 @@
     .education-card {
         padding: 1rem;
         margin-bottom: 1.5rem;
-        height: 130px;
+        height: auto;
+        min-height: unset;
     }
     .educard-img {
         border-radius: 50%;

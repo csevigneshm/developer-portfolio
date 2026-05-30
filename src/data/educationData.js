@@ -1,23 +1,16 @@
 export const educationData = [
     {
         id: 1,
-        institution: 'Vigneswara Vidyalaya Matriculation Higher Secondary School',
-        course: 'SSLC',
-        startYear: '',
-        endYear: '2015'
+        institution: 'Vigneswara Vidyalaya Matriculation Higher Secondary School, Tirupur',
+        course: 'SSLC & HSC',
+        startYear: '2004',
+        endYear: '2017',
     },
     {
         id: 2,
-        institution: 'Vigneswara Vidyalaya Matriculation Higher Secondary School',
-        course: 'HSC',
-        startYear: '',
-        endYear: '2017'
-    },
-    {
-        id: 3,
-        institution: 'KSR Institute For Engineering and Technology',
-        course: 'B.E CSE',
+        institution: 'KSR Institute for Engineering and Technology, Tiruchengode',
+        course: 'B.E — Computer Science and Engineering',
         startYear: '2017',
-        endYear: '2021'
+        endYear: '2021',
     },
-]
+];

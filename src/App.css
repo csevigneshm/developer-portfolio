@@ -1,5 +1,9 @@
 :root {
     --primaryFont: 'Poppins', sans-serif;
-    /* --primaryFont: 'Montserrat', sans-serif; */
-    /* --primaryFont: 'Raleway', sans-serif; */
+    --pageBackground: #212121;
+}
+
+.app {
+    min-height: 100vh;
+    background-color: var(--pageBackground);
 }

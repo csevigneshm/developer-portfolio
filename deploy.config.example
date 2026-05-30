@@ -9,3 +9,9 @@
 # SERVER_USER="vignesh"
 # SERVER_HOST="199.192.19.46"
 # REMOTE_PATH="~/react-projects/developer-portfolio"
+#
+# Deploy flags (optional, skip interactive prompt):
+#   npm run deploy:frontend   # frontend only
+#   npm run deploy:backend    # frontend + backend (with server note)
+#   ./deploy.sh --with-backend
+#   ./deploy.sh --frontend-only

@@ -3,8 +3,12 @@ import pic from '../assets/png/Resume.jpeg'
 
 export const headerData = {
     name: 'Vignesh M',
-    title: "Software Engineer",
-    desciption:"Experienced full-stack developer skilled in building dynamic web applications and proficient in backend development. Adept at API integration and ensuring smooth frontend-backend communication.",
+    title: 'Software Engineer',
+    description:
+        'Full-Stack Developer with 4+ years of experience building scalable, responsive web applications. I focus on clean code, smooth user experiences, and reliable production delivery. Quick learner with a collaborative mindset and Agile workflow experience.',
     image: pic,
-    resumePdf: resume
+    resumePdf: resume,
 }
+
+// Legacy typo kept for any external references
+headerData.desciption = headerData.description;

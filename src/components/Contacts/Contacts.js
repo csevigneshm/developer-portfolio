@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Snackbar, IconButton, SnackbarContent } from '@material-ui/core';
+import { Snackbar, IconButton, SnackbarContent, CircularProgress } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import axios from 'axios';
 import isEmail from 'validator/lib/isEmail';
@@ -31,9 +31,11 @@ function Contacts() {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
     const [message, setMessage] = useState('');
 
     const [success, setSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [errMsg, setErrMsg] = useState('');
 
     const { theme } = useContext(ThemeContext);
@@ -44,7 +46,10 @@ function Contacts() {
         }
 
         setOpen(false);
+        setSuccess(false);
     };
+
+    const showSentState = success && open;
 
     const useStyles = makeStyles((t) => ({
         input: {
@@ -123,32 +128,67 @@ function Contacts() {
                 color: theme.secondary,
                 backgroundColor: theme.tertiary,
             },
+            '&:disabled': {
+                opacity: 0.75,
+                cursor: 'not-allowed',
+                transform: 'none',
+            },
         },
     }));
 
     const classes = useStyles();
 
+    const isValidPhone = (value) => {
+        const digits = value.replace(/\D/g, '');
+        return digits.length >= 7 && digits.length <= 15;
+    };
+
+    const handleFieldChange = (setter) => (e) => {
+        setter(e.target.value);
+        if (success) {
+            setSuccess(false);
+        }
+    };
+
     const handleContactForm = (e) => {
         e.preventDefault();
 
-        if (name && email && message) {
+        if (name && email && phone && message) {
             if (isEmail(email)) {
+                if (!isValidPhone(phone)) {
+                    setErrMsg('Invalid phone number');
+                    setOpen(true);
+                    return;
+                }
+
                 const responseData = {
                     name: name,
                     email: email,
+                    phone: phone,
                     message: message,
                 };
 
-                axios.post(contactsData.sheetAPI, responseData).then((res) => {
-                    console.log('success');
-                    setSuccess(true);
-                    setErrMsg('');
+                setSuccess(false);
+                setLoading(true);
 
-                    setName('');
-                    setEmail('');
-                    setMessage('');
-                    setOpen(false);
-                });
+                axios
+                    .post(contactsData.sheetAPI, responseData)
+                    .then(() => {
+                        setName('');
+                        setEmail('');
+                        setPhone('');
+                        setMessage('');
+                        setSuccess(true);
+                        setErrMsg('Message sent successfully!');
+                        setOpen(true);
+                        setLoading(false);
+                    })
+                    .catch(() => {
+                        setSuccess(false);
+                        setErrMsg('Something went wrong. Please try again.');
+                        setOpen(true);
+                        setLoading(false);
+                    });
             } else {
                 setErrMsg('Invalid email');
                 setOpen(true);
@@ -177,9 +217,11 @@ function Contacts() {
                                 <input
                                     placeholder='Your Name Here'
                                     value={name}
-                                    onChange={(e) => setName(e.target.value)}
+                                    onChange={handleFieldChange(setName)}
                                     type='text'
                                     name='Name'
+                                    required
+                                    disabled={loading}
                                     className={`form-input ${classes.input}`}
                                 />
                             </div>
@@ -193,9 +235,29 @@ function Contacts() {
                                 <input
                                     placeholder='Your email Here'
                                     value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
+                                    onChange={handleFieldChange(setEmail)}
                                     type='email'
                                     name='Email'
+                                    required
+                                    disabled={loading}
+                                    className={`form-input ${classes.input}`}
+                                />
+                            </div>
+                            <div className='input-container'>
+                                <label
+                                    htmlFor='Phone'
+                                    className={classes.label}
+                                >
+                                    Phone
+                                </label>
+                                <input
+                                    placeholder='Your phone number'
+                                    value={phone}
+                                    onChange={handleFieldChange(setPhone)}
+                                    type='tel'
+                                    name='Phone'
+                                    required
+                                    disabled={loading}
                                     className={`form-input ${classes.input}`}
                                 />
                             </div>
@@ -209,9 +271,10 @@ function Contacts() {
                                 <textarea
                                     placeholder='Type your message....'
                                     value={message}
-                                    onChange={(e) => setMessage(e.target.value)}
-                                    type='text'
+                                    onChange={handleFieldChange(setMessage)}
                                     name='Message'
+                                    required
+                                    disabled={loading}
                                     className={`form-message ${classes.message}`}
                                 />
                             </div>
@@ -220,29 +283,48 @@ function Contacts() {
                                 <button
                                     type='submit'
                                     className={classes.submitBtn}
+                                    disabled={loading}
                                 >
-                                    <p>{!success ? 'Send' : 'Sent'}</p>
+                                    <p>
+                                        {loading
+                                            ? 'Sending...'
+                                            : showSentState
+                                            ? 'Sent'
+                                            : 'Send'}
+                                    </p>
                                     <div className='submit-icon'>
-                                        <AiOutlineSend
-                                            className='send-icon'
-                                            style={{
-                                                animation: !success
-                                                    ? 'initial'
-                                                    : 'fly 0.8s linear both',
-                                                position: success
-                                                    ? 'absolute'
-                                                    : 'initial',
-                                            }}
-                                        />
-                                        <AiOutlineCheckCircle
-                                            className='success-icon'
-                                            style={{
-                                                display: !success
-                                                    ? 'none'
-                                                    : 'inline-flex',
-                                                opacity: !success ? '0' : '1',
-                                            }}
-                                        />
+                                        {loading ? (
+                                            <CircularProgress
+                                                size={22}
+                                                thickness={5}
+                                                style={{ color: theme.secondary }}
+                                            />
+                                        ) : (
+                                            <>
+                                                <AiOutlineSend
+                                                    className='send-icon'
+                                                    style={{
+                                                        animation: !showSentState
+                                                            ? 'initial'
+                                                            : 'fly 0.8s linear both',
+                                                        position: showSentState
+                                                            ? 'absolute'
+                                                            : 'initial',
+                                                    }}
+                                                />
+                                                <AiOutlineCheckCircle
+                                                    className='success-icon'
+                                                    style={{
+                                                        display: !showSentState
+                                                            ? 'none'
+                                                            : 'inline-flex',
+                                                        opacity: !showSentState
+                                                            ? '0'
+                                                            : '1',
+                                                    }}
+                                                />
+                                            </>
+                                        )}
                                     </div>
                                 </button>
                             </div>
@@ -255,6 +337,9 @@ function Contacts() {
                             open={open}
                             autoHideDuration={4000}
                             onClose={handleClose}
+                            TransitionProps={{
+                                onExited: () => setSuccess(false),
+                            }}
                         >
                             <SnackbarContent
                                 action={
@@ -306,7 +391,7 @@ function Contacts() {
                             <div className={classes.detailsIcon}>
                                 <HiOutlineLocationMarker />
                             </div>
-                            <p style={{ color: theme.tertiary }}>
+                            <p className="location-line" style={{ color: theme.tertiary }}>
                                 {contactsData.address}
                             </p>
                         </div>

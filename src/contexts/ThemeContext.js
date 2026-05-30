@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 
 import { themeData } from '../data/themeData'
 
@@ -8,6 +8,11 @@ function ThemeContextProvider(props) {
     // eslint-disable-next-line
     const [theme, setTheme] = useState(themeData.theme)
     const [drawerOpen, setDrawerOpen] = useState(false)
+
+    useEffect(() => {
+        document.documentElement.style.backgroundColor = theme.secondary
+        document.body.style.backgroundColor = theme.secondary
+    }, [theme.secondary])
 
     const setHandleDrawer = () => {
         setDrawerOpen(!drawerOpen)
