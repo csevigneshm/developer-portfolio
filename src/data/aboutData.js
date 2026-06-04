@@ -1,7 +1,5 @@
 export const aboutData = {
     title: 'Who I am',
-    description1: "I'm Vignesh Moorthy, a Full-Stack Web Developer based in Chennai, Tamil Nadu, India.",
-    description2:
-        'I build end-to-end web applications — from responsive frontends and REST APIs to admin dashboards and production deployments. I have experience across client projects, internal tools, and enterprise platforms, working with technologies like React, PHP, JavaScript, and MySQL. My recent project work includes a Python and GenAI-powered full-stack platform. I follow Agile workflows, collaborate through Jira and GitHub, and focus on clean, maintainable code.',
+    description1: "Hi, I'm Vignesh Moorthy from Chennai, Tamil Nadu. I'm a Full-Stack Developer with around 4 years of experience in web application development. I have worked on both frontend and backend technologies, mainly using React, PHP, JavaScript, MySQL, and Python. Throughout my career, I have built complete web applications, including responsive user interfaces, REST APIs, admin dashboards, and database-driven systems. Recently, I worked on a full-stack platform that incorporated Python and GenAI technologies. I am comfortable working in Agile environments and regularly use tools like Git, GitHub, and Jira for collaboration and project management. I enjoy solving technical problems, learning new technologies, and developing scalable, maintainable applications that provide a good user experience.",
     image: 1,
 };
