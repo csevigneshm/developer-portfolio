@@ -21,6 +21,12 @@ deploy.config.local
 backend/node_modules
 backend/.env
 
+# Python RAG backend (Vro Chat)
+python-BE/rag-env/
+python-BE/.env
+python-BE/__pycache__/
+python-BE/**/__pycache__/
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

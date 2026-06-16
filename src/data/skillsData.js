@@ -1,14 +1,14 @@
 export const skillsData = {
     core: [
+        'Python',
+        'React',
+        'TypeScript',
+        'Javascript',
         'HTML',
         'CSS',
         'SCSS',
-        'Javascript',
         'jQuery',
         'PHP',
-        'React',
-        'TypeScript',
-        'Python',
         'Node JS',
         'Express JS',
         'MySQL',

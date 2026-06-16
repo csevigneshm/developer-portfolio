@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import { Main, BlogPage, ProjectPage, OverviewPage } from './pages'
-import { BackToTop } from './components'
+import { VroChat } from './components'
 import ScrollToTop from './utils/ScrollToTop'
 
 
@@ -23,7 +23,7 @@ function App() {
           <Redirect to="/" />
         </Switch>
       </Router>
-      <BackToTop />
+      <VroChat />
     </div>
   );
 }

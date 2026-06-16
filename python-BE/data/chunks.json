@@ -1,0 +1,114 @@
+[
+  {
+    "chunk_id": "chunk_001",
+    "text": "VIGNESH MOORTHY\nSoftware Engineer\ncsevigneshm@gmail.com\n+91 9092907692\nlinkedin.com/in/vignez-dev\nChennai, Tamil Nadu, India\nPROFESSIONAL SUMMARY\nFull-Stack Developer with 4+ years of experience building scalable, responsive web applications. Skilled\nin end-to-end feature development, API integrations, and performance optimization while following\nAgile workflows. A quick learner with strong problem-solving skills and a collaborative mindset.\nEDUCATION\n•SSLC & HSC (2004 - 2017)\nVigneswara Vidyala",
+    "metadata": {
+      "start_char": 0,
+      "end_char": 499
+    }
+  },
+  {
+    "chunk_id": "chunk_002",
+    "text": "m-solving skills and a collaborative mindset.\nEDUCATION\n•SSLC & HSC (2004 - 2017)\nVigneswara Vidyalaya Matriculation Higher Secondary School,\nTirupur, Tamil Nadu, India\n•Bachelor of Engineering in Computer Science and Engineering (2017 - 2021)\nKSR Institute for Engineering and Technology,\nTiruchengode, Namakkal District, Tamil Nadu, India\nCGPA: 7.41\nEXPERIENCE 4+ Years\n•Software Engineer | Orion Innovation Feb 2025 – Apr 2026\nCoimbatore, Tamil Nadu, India\n–Full-Stack Developer responsible for pr",
+    "metadata": {
+      "start_char": 400,
+      "end_char": 899
+    }
+  },
+  {
+    "chunk_id": "chunk_003",
+    "text": "nnovation Feb 2025 – Apr 2026\nCoimbatore, Tamil Nadu, India\n–Full-Stack Developer responsible for production applications, handling frontend, backend, and API\nintegrations across Agile sprints.\n–Resolved Jira tickets for feature enhancements, bug fixes, and performance optimization.\n–Wrote Python scripts for automation and deployed them on Docker containers.\n–Implemented data analytics and tracking using HubSpot and Google Tag Manager.\n–Contributed to NEBULA, a GenAI PDLC (Product Development Li",
+    "metadata": {
+      "start_char": 800,
+      "end_char": 1299
+    }
+  },
+  {
+    "chunk_id": "chunk_004",
+    "text": "g using HubSpot and Google Tag Manager.\n–Contributed to NEBULA, a GenAI PDLC (Product Development Life Cycle) platform built with modern\ntechnologies.\n•Software Engineer | HIOX Softwares Pvt Ltd Nov 2021 – Jan 2025\nCoimbatore, Tamil Nadu, India\n–Built and deployed production websites using LAMP stack, Python, and React for clients and internal\nproducts.\n–Developed responsive frontends, REST APIs, admin dashboards, and secure authentication modules\nand Migrated legacy jQuery components to modern,",
+    "metadata": {
+      "start_char": 1200,
+      "end_char": 1699
+    }
+  },
+  {
+    "chunk_id": "chunk_005",
+    "text": "admin dashboards, and secure authentication modules\nand Migrated legacy jQuery components to modern, optimized implementations.\n–Worked on the Hiox.com platform upgrade, contributing to a React-based dashboard and\nAI-powered features.\n–Managed production deployments, optimized SQL queries, and scheduled cron jobs for automation.\n–Gained hands-on experience in VPS server administration, website hosting, DNS management, SSL\nconfiguration, bandwidth monitoring, performance optimization, and product",
+    "metadata": {
+      "start_char": 1600,
+      "end_char": 2099
+    }
+  },
+  {
+    "chunk_id": "chunk_006",
+    "text": "ting, DNS management, SSL\nconfiguration, bandwidth monitoring, performance optimization, and production deployments.\n–Trained in AI technologies, including NLP and Generative AI fundamentals, and developed PDF\ngeneration features using RAG-based systems.\nSKILLS\n•FRONTEND\n–React, TypeScript, JavaScript (ES6+), jQuery, HTML5, CSS3, SCSS, Tailwind CSS, Bootstrap\n•BACKEND\n– Python Ecosystem:\n* Core & Backend:Python, FastAPI, REST APIs, GraphQL APIs, CRUD Operations\n* Data & Scripts:Pandas, NumPy, Py",
+    "metadata": {
+      "start_char": 2000,
+      "end_char": 2499
+    }
+  },
+  {
+    "chunk_id": "chunk_007",
+    "text": "Backend:Python, FastAPI, REST APIs, GraphQL APIs, CRUD Operations\n* Data & Scripts:Pandas, NumPy, Python Scripts\n* GenAI & Advanced AI:RAG, LLM Integration, Vector Embeddings, Vector Databases, LangChain,\nHugging Face\n– PHP Ecosystem:\n* Core PHP , Laravel, LAMP Stack, MVC Architecture, OOP Principles, Composer Packages,\nDependency Management, Cron Jobs\n– Node.js Ecosystem:\n* Node.js, Express.js, Next.js, Vite, React, REST APIs, NPM Packages\n•STACKS\n–MERN Stack (MongoDB, Express.js, React, Node.j",
+    "metadata": {
+      "start_char": 2400,
+      "end_char": 2899
+    }
+  },
+  {
+    "chunk_id": "chunk_008",
+    "text": "ext.js, Vite, React, REST APIs, NPM Packages\n•STACKS\n–MERN Stack (MongoDB, Express.js, React, Node.js)\n–LAMP Stack (Linux, Apache, MySQL, PHP)\n–React + Python Stack (React Frontend + FastAPI Backend)\n•DATABASES\n–PostgreSQL, MySQL, MongoDB, SQLite, Query Optimization, Database Design\n•TOOLS & DEVOPS\n–Cursor, VS Code, Git, GitHub, Docker, Linux, Nginx, Jira, Azure DevOps, Azure Data Lake, CI/CD\nPipelines\nPROJECTS\n•Triseas Food Company INC — E-Commerce Showcase\nBuilt a seafood product showcase plat",
+    "metadata": {
+      "start_char": 2800,
+      "end_char": 3299
+    }
+  },
+  {
+    "chunk_id": "chunk_009",
+    "text": "lines\nPROJECTS\n•Triseas Food Company INC — E-Commerce Showcase\nBuilt a seafood product showcase platform with a custom admin panel for product and inventory\nmanagement using PHP , MySQL, jQuery, and SCSS.\nURL:triseasfoodcompanyinc.in\n•HioxIndia.com — Feature Development & Optimization\nDeveloped renewal rate and promo/offer modules, optimized SQL queries and REST API endpoints, and\nmigrated legacy jQuery to maintainable implementations.\nURL:hioxindia.com\n•Hiox.com — Site Update & AI PDF Tool\nBuil",
+    "metadata": {
+      "start_char": 3200,
+      "end_char": 3699
+    }
+  },
+  {
+    "chunk_id": "chunk_010",
+    "text": "jQuery to maintainable implementations.\nURL:hioxindia.com\n•Hiox.com — Site Update & AI PDF Tool\nBuilt a React dashboard from scratch for the Hiox.com platform upgrade and developed an AI-powered\nPDF generation tool leveraging RAG-based document generation.\nURL:hiox.com\n•Hiox Internal Chat — Real-Time Chat System (Long Polling)\nDeveloped a real-time internal chat system using long polling for near real-time messaging, optimized\nbackend message handling, and designed a clean chat UI for daily team",
+    "metadata": {
+      "start_char": 3600,
+      "end_char": 4099
+    }
+  },
+  {
+    "chunk_id": "chunk_011",
+    "text": "real-time messaging, optimized\nbackend message handling, and designed a clean chat UI for daily team use.\n•Holley.com (US Client — Orion Innovation)\nDeveloped the Compare Tool and contributed to enhancements of the Admin Tool on a large US\nautomotive e-commerce platform, following GitHub workflow with Jira tickets and code reviews.\nURL:holley.com\n•NEBULA — GenAI SDLC Platform (Orion Innovation)\nCenter of Innovation (COI) internal GenAI platform developed using React (Frontend) and Python\n(Backen",
+    "metadata": {
+      "start_char": 4000,
+      "end_char": 4499
+    }
+  },
+  {
+    "chunk_id": "chunk_012",
+    "text": "nter of Innovation (COI) internal GenAI platform developed using React (Frontend) and Python\n(Backend) to automate the Product Development Life Cycle (PDLC). The platform generates and\nmanages PRD, SRS, HLD, LLD, Scrum artifacts, database designs, code, test cases, documentation, and\ncode reviews, significantly improving development productivity and reducing delivery time.\n•vignesh-dev.in — Personal Portfolio & VPS Hosting\nBuilt a React portfolio with Nginx, SSL, Git-based deploy pipeline, SEO m",
+    "metadata": {
+      "start_char": 4400,
+      "end_char": 4899
+    }
+  },
+  {
+    "chunk_id": "chunk_013",
+    "text": "al Portfolio & VPS Hosting\nBuilt a React portfolio with Nginx, SSL, Git-based deploy pipeline, SEO meta tags, and structured data\non a Hostinger VPS.\nURL:vignesh-dev.in\nLANGUAGES\n•English (Professional Proficiency)\n•Tamil (Native)\nADDITIONAL INFORMATION\n•Well-equipped remote work setup ensuring smooth and efficient productivity\n•Valid Passport – Open to International Relocation/Travel\n•Strong team player with excellent collaboration skills\n•Quick learner, always eager to explore new technologies",
+    "metadata": {
+      "start_char": 4800,
+      "end_char": 5299
+    }
+  },
+  {
+    "chunk_id": "chunk_014",
+    "text": " player with excellent collaboration skills\n•Quick learner, always eager to explore new technologies\n•Strong UI development and styling skills using CSS and SCSS",
+    "metadata": {
+      "start_char": 5200,
+      "end_char": 5360
+    }
+  }
+]

@@ -7,12 +7,12 @@ export const experienceData = [
         startYear: 'Feb 2025',
         endYear: 'Apr 2026',
         description:
-            'Full-Stack Developer on production applications, handling frontend, backend, and API integrations across Agile sprints.',
+            'Full-Stack Developer responsible for production applications, handling frontend, backend, and API integrations across Agile sprints.',
         highlights: [
-            'Developed and maintained end-to-end features including UI, business logic, and API integrations.',
-            'Resolved Jira tickets for feature enhancements, bug fixes, and performance improvements.',
-            'Completed MEAN Stack corporate training with strong evaluation scores.',
-            'Contributed to NEBULA, a GenAI SDLC platform — building UI modules and displaying AI-generated outputs.',
+            'Resolved Jira tickets for feature enhancements, bug fixes, and performance optimization.',
+            'Wrote Python scripts for automation and deployed them on Docker containers.',
+            'Implemented data analytics and tracking using HubSpot and Google Tag Manager.',
+            'Contributed to NEBULA, a GenAI PDLC platform built with React and Python RAG workflows.',
         ],
     },
     {
@@ -23,12 +23,14 @@ export const experienceData = [
         startYear: 'Nov 2021',
         endYear: 'Jan 2025',
         description:
-            'Built and deployed production websites using the LAMP stack for clients and internal products.',
+            'Built and deployed production websites using the LAMP stack, Python, and React for clients and internal products.',
         highlights: [
             'Developed responsive frontends, REST APIs, admin dashboards, and secure authentication modules.',
-            'Applied React.js fundamentals while customizing and enhancing admin templates.',
-            'Migrated legacy jQuery components to optimized modern versions.',
-            'Managed production deployments, SQL queries, and scheduled cron jobs.',
+            'Migrated legacy jQuery components to modern, optimized implementations.',
+            'Worked on the Hiox.com platform upgrade with a React dashboard and AI-powered features.',
+            'Managed production deployments, optimized SQL queries, and scheduled cron jobs for automation.',
+            'Handled VPS server administration, hosting, DNS, SSL, bandwidth monitoring, and production deployments.',
+            'Developed PDF generation features using RAG-based systems and trained in NLP and Generative AI fundamentals.',
         ],
     },
 ];

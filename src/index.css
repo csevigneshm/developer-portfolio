@@ -60,6 +60,30 @@ img{
 
 }
 
+/* Buy Me a Coffee widget — force bottom-left */
+#bmc-wbtn {
+  left: 18px !important;
+  right: auto !important;
+  bottom: max(18px, env(safe-area-inset-bottom)) !important;
+  z-index: 1090 !important;
+}
+
+#bmc-wbtn + div {
+  left: 18px !important;
+  right: auto !important;
+}
+
+@media screen and (max-width: 768px) {
+  #bmc-wbtn {
+    left: 12px !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+  }
+
+  #bmc-wbtn + div {
+    left: 12px !important;
+  }
+}
+
 
 @media screen and (max-width: 400px) {
   body {

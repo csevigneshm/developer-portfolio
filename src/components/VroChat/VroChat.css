@@ -1,0 +1,417 @@
+.vro-chat {
+    position: fixed;
+    right: 18px !important;
+    left: auto !important;
+    bottom: max(18px, env(safe-area-inset-bottom)) !important;
+    z-index: 1100;
+    font-family: 'Poppins', sans-serif;
+    --launcher-size: 64px;
+    --launcher-icon-size: 27px;
+}
+
+.vro-chat__backdrop {
+    display: none;
+}
+
+.vro-chat__launcher {
+    width: var(--launcher-size);
+    height: var(--launcher-size);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vro-chat__launcher:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.4);
+}
+
+.vro-chat__launcher-icon {
+    font-size: var(--launcher-icon-size);
+    color: #fff;
+}
+
+.vro-chat__launcher-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #fff;
+    color: #212121;
+    font-size: 0.65rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.04em;
+}
+
+.vro-chat__panel {
+    position: absolute;
+    right: 0;
+    left: auto;
+    bottom: calc(var(--launcher-size) + 14px);
+    width: 380px;
+    max-width: calc(100vw - 32px);
+    height: 520px;
+    max-height: calc(100vh - 120px);
+    max-height: calc(100dvh - 120px);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.vro-chat--open .vro-chat__panel {
+    animation: vroChatPopIn 0.2s ease;
+}
+
+.vro-chat--closing .vro-chat__panel {
+    animation: vroChatPopOut 0.2s ease forwards;
+}
+
+.vro-chat--open .vro-chat__backdrop {
+    animation: vroChatFadeIn 0.2s ease;
+}
+
+.vro-chat--closing .vro-chat__backdrop {
+    animation: vroChatFadeOut 0.2s ease forwards;
+}
+
+@keyframes vroChatPopIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes vroChatPopOut {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(16px) scale(0.96);
+    }
+}
+
+@keyframes vroChatFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes vroChatFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.vro-chat__header {
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.vro-chat__header-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.vro-chat__avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.vro-chat__title-wrap {
+    min-width: 0;
+}
+
+.vro-chat__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.vro-chat__subtitle {
+    margin: 4px 0 0;
+    font-size: 0.75rem;
+    opacity: 0.85;
+    line-height: 1.3;
+}
+
+.vro-chat__header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.vro-chat__icon-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vro-chat__icon-btn--close {
+    background: rgba(255, 255, 255, 0.28);
+}
+
+.vro-chat__icon-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.vro-chat__messages {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+}
+
+.vro-chat__message {
+    max-width: 88%;
+    padding: 12px 14px;
+    border-radius: 16px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
+
+.vro-chat__message--bot {
+    align-self: flex-start;
+    border-bottom-left-radius: 6px;
+}
+
+.vro-chat__message--user {
+    align-self: flex-end;
+    border-bottom-right-radius: 6px;
+}
+
+.vro-chat__message-label {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    opacity: 0.75;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.vro-chat__footer {
+    padding: 14px 16px 16px;
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+
+.vro-chat__input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vro-chat__input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.88rem;
+    font-family: inherit;
+    color: inherit;
+    caret-color: currentColor;
+}
+
+.vro-chat__input::placeholder {
+    color: inherit;
+    opacity: 0.55;
+}
+
+.vro-chat__send-btn {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #fff;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.vro-chat__send-btn:not(:disabled):hover {
+    transform: scale(1.05);
+}
+
+.vro-chat__typing {
+    font-style: italic;
+    opacity: 0.85;
+}
+
+@media screen and (max-width: 768px) {
+    .vro-chat {
+        right: 12px !important;
+        left: auto !important;
+        bottom: max(12px, env(safe-area-inset-bottom)) !important;
+    }
+
+    .vro-chat__launcher-icon {
+        font-size: var(--launcher-icon-size);
+    }
+
+    .vro-chat__launcher-badge {
+        min-width: 20px;
+        height: 20px;
+        font-size: 0.6rem;
+    }
+
+    .vro-chat--open .vro-chat__launcher {
+        z-index: 1101;
+    }
+
+    .vro-chat__backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1099;
+        cursor: pointer;
+    }
+
+    .vro-chat__panel {
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        bottom: calc(var(--launcher-size) + max(12px, env(safe-area-inset-bottom)) + 10px);
+        width: auto;
+        max-width: calc(100vw - 24px);
+        height: min(68dvh, calc(100dvh - var(--launcher-size) - 34px));
+        max-height: min(68dvh, calc(100dvh - var(--launcher-size) - 34px));
+        border-radius: 18px;
+        z-index: 1100;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .vro-chat__header {
+        padding: 14px 16px;
+    }
+
+    .vro-chat__avatar {
+        width: 38px;
+        height: 38px;
+    }
+
+    .vro-chat__title {
+        font-size: 0.95rem;
+    }
+
+    .vro-chat__subtitle {
+        font-size: 0.7rem;
+    }
+
+    .vro-chat__icon-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .vro-chat__messages {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .vro-chat__message {
+        max-width: 92%;
+        font-size: 0.9rem;
+        padding: 11px 13px;
+    }
+
+    .vro-chat__input {
+        font-size: 16px;
+    }
+
+    .vro-chat__send-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .vro-chat__footer {
+        padding: 12px 14px max(14px, env(safe-area-inset-bottom));
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .vro-chat__panel {
+        left: 10px;
+        right: 10px;
+        max-width: calc(100vw - 20px);
+        height: min(74dvh, calc(100dvh - var(--launcher-size) - 30px));
+        max-height: min(74dvh, calc(100dvh - var(--launcher-size) - 30px));
+    }
+
+    .vro-chat__message {
+        max-width: 92%;
+    }
+}

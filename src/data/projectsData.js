@@ -41,14 +41,14 @@ export const projectsData = [
         id: 3,
         projectName: 'Hiox.com',
         projectDesc:
-            'Latest project at HIOX — site update built from scratch with a React dashboard, plus an AI-powered PDF tool to scan documents and interact based on PDF content.',
+            'HIOX platform upgrade built from scratch with a React dashboard and an AI-powered PDF tool using Python for document processing and generation.',
         highlights: [
-            'Started the hiox.com site update from scratch using a React-based dashboard.',
-            'Built an AI-powered PDF generator tool to scan PDFs and enable interaction based on document content.',
-            'Integrated Node.js and Python backends with Hugging Face models for AI capabilities.',
+            'Built a React dashboard from scratch for the Hiox.com platform upgrade.',
+            'Developed an AI-powered PDF generation tool with a Python backend and Hugging Face integration.',
+            'Connected React frontend modules to Python APIs for document scanning and content-based interaction.',
             'Designed dashboard UI with Material UI and custom CSS.',
         ],
-        tags: ['React', 'Material UI', 'CSS', 'Node JS', 'Python', 'Hugging Face'],
+        tags: ['React', 'Python', 'Material UI', 'CSS', 'Node JS', 'Hugging Face'],
         code: '',
         demo: 'https://www.hiox.com/',
         image: hioxImg,
@@ -82,7 +82,7 @@ export const projectsData = [
             'Contributed to Admin Tool enhancements for internal operations.',
             'Followed GitHub workflow with Jira tickets, code reviews, and team collaboration.',
         ],
-        tags: ['TypeScript', 'PHP', 'SCSS', 'MySQL', 'GitHub', 'Analytics', 'Docker', 'Linux', 'Zeplin'],
+        tags: ['TypeScript', 'PHP', 'SCSS', 'MySQL', 'GitHub', 'Analytics', 'Docker', 'Linux', 'Zeplin', 'Python'],
         code: '',
         demo: 'https://www.holley.com/',
         image: holleyImg,
@@ -90,15 +90,15 @@ export const projectsData = [
     },
     {
         id: 6,
-        projectName: 'NEBULA — GenAI SDLC Platform',
+        projectName: 'NEBULA — GenAI PDLC Platform',
         projectDesc:
-            'Full-stack GenAI platform — React frontend and Python backend automating SDLC tasks such as documentation, code generation, and test case creation.',
+            'Orion Innovation COI internal GenAI platform with a React frontend and Python FastAPI backend, using OpenAI embeddings and RAG retrieval to automate the Product Development Life Cycle.',
         highlights: [
-            'Built React (TypeScript) UI modules for AI-generated output display.',
-            'Developed Python backend integrations for GenAI-driven SDLC workflows.',
-            'Worked on end-to-end flows for documentation and test case generation features.',
+            'Built React (TypeScript) UI modules to display AI-generated PRD, SRS, HLD, LLD, and Scrum artifacts.',
+            'Developed Python FastAPI services with OpenAI embeddings, vector storage, and RAG retrieval for GenAI workflows.',
+            'Integrated LLM-powered pipelines for documentation, code generation, test cases, and code review automation.',
         ],
-        tags: ['React', 'Python', 'TypeScript', 'GenAI'],
+        tags: ['React', 'Python', 'FastAPI', 'TypeScript', 'RAG', 'GenAI'],
         code: '',
         demo: '',
         image: orionImg,
@@ -107,30 +107,15 @@ export const projectsData = [
         id: 7,
         projectName: 'vignesh-dev.in',
         projectDesc:
-            'Personal live site hosting my portfolio and self-built tools — deployed on a VPS with custom domain and SSL.',
+            'Personal portfolio deployed on a VPS with a React frontend and an AI chatbot (Vro) powered by a Python RAG backend over resume content.',
         highlights: [
-            'Built and customized a React portfolio for personal branding and content.',
-            'Set up Nginx, SSL, and Git-based deploy pipeline on Hostinger VPS.',
-            'Configured SEO meta tags, structured data, and responsive layouts.',
+            'Built a React portfolio with responsive layouts, SEO meta tags, and structured data.',
+            'Integrated Vro Chat — a resume-aware AI chatbot using React UI, FastAPI, OpenAI embeddings, and RAG retrieval.',
+            'Set up Nginx, SSL, and a Git-based deploy pipeline on Hostinger VPS.',
         ],
-        tags: ['React', 'JavaScript', 'CSS', 'Nginx'],
+        tags: ['React', 'Python', 'FastAPI', 'RAG', 'JavaScript', 'Nginx'],
         code: 'https://github.com/csevigneshm/developer-portfolio',
         demo: 'https://vignesh-dev.in/',
-        image: ownLogoImg
-    },
-    {
-        id: 8,
-        projectName: 'Productivity Tracker',
-        projectDesc:
-            'Daily productivity tracking app hosted at tracker.vignesh-dev.in — built to log habits, tasks, and progress for career growth.',
-        highlights: [
-            'Built with a React frontend and Laravel backend for daily productivity and career-focused goal tracking.',
-            'Hosted as a subdomain under vignesh-dev.in on the same VPS infrastructure.',
-            'Designed for consistent daily use to measure and improve work habits over time.',
-        ],
-        tags: ['React', 'Laravel', 'Typecript', 'VPS', 'MySQL'],
-        code: 'https://github.com/csevigneshm/productivity-tracker',
-        demo: 'https://tracker.vignesh-dev.in/',
         image: ownLogoImg
     },
 ];
