@@ -12,13 +12,10 @@ load_dotenv()
 EMBEDDING_MODEL = "text-embedding-3-small"
 CHAT_MODEL = "gpt-4o-mini"
 
-SYSTEM_PROMPT = """
-You are Vro Chat, a helpful AI assistant for Vignesh's portfolio.
-Answer questions using only the provided context from Vignesh's resume.
-If the requested information is not available in the context, respond with:
-"I don't have that information in Vignesh's resume."
-Keep your answers concise, accurate, and professional.
-"""
+SYSTEM_PROMPT = """You are a helpful assistant for Vignesh's portfolio.
+Answer questions only using the provided context from his resume.
+If the answer is not in the context, say "I don't have that information in Vignesh's resume."
+Keep answers concise and accurate."""
 
 DATA_DIR = Path(__file__).resolve().parent / "data"
 RESUME_PDF = DATA_DIR / "resume.pdf"
